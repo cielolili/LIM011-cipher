@@ -10,17 +10,18 @@ let direccion = document.getElementById("direccion");
 let numeroDNI = document.getElementById("numeroDNI");
 let telefono = document.getElementById("telefono");
 let pagar = document.getElementById("pagar");
-let cajadetexto = document.getElementById("cajadetexto");
+let cajadetexto = document.getElementById("cajadetexto"); //caja donde saldrá codificado
 let cajadetexto1 = document.getElementById("cajadetexto1"); //caja donde saldrá decodificado
 let texto = document.getElementById("texto"); //para codificar
 let codificado = document.getElementById("codificado"); //mandando los datos a la otra pagina
-let desplazamiento = document.getElementById ("desplazamiento");
+let desplazamiento = document.getElementById ("desplazamiento"); 
 let desplazamiento1= document.getElementById("desplazamiento1"); //para decoodificar
+
 //llamo al botón Encriptar
 btnEncode.addEventListener("click", Encode);
 function Encode() {
-	let desplazamiento = document.getElementById("desplazamiento").value;
-	cajadetexto.value = cipher.encode(desplazamiento,nombre.value + ' ' + edad.value + ' ' + provincia.value + ' '+ distrito.value + ' ' + direccion.value +' '+ numeroDNI.value + ' ' + telefono.value + ' ' + pagar.value);
+ desplazamiento = document.getElementById("desplazamiento").value;
+ cajadetexto.value = cipher.encode(desplazamiento,nombre.value + ' ' + edad.value + ' ' + provincia.value + ' '+ distrito.value + ' ' + direccion.value +' '+ numeroDNI.value + ' ' + telefono.value + ' ' + pagar.value);
  codificado.value=cipher.encode( desplazamiento,nombre.value + ' ' + edad.value + ' ' + provincia.value + ' '+ distrito.value + ' ' + direccion.value +' '+ numeroDNI.value + ' ' + telefono.value + ' ' + pagar.value);
 }
 
@@ -28,7 +29,7 @@ function Encode() {
 //llamo al botón Desencriptar
 btnDecode.addEventListener("click", Decode);
 function Decode() {
-	let desplazamiento1 = document.getElementById("desplazamiento1").value; //el segundo desplazamiento
+  desplazamiento1 = document.getElementById("desplazamiento1").value; //el segundo desplazamiento
 	cajadetexto1.value = cipher.decode(desplazamiento1, texto.value); //donde quiero que me salga el resultado
 
 }
