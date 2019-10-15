@@ -2,6 +2,7 @@
 let btnEncode = document.getElementById("cifrar");
 let btnDecode = document.getElementById("descifrar");
 let btnLimpiar = document.getElementById("botonLimpiar");
+let btnLimpiamos = document.getElementById("botonLimpiamos");
 let nombre = document.getElementById("nombre");
 let edad = document.getElementById("edad");
 let provincia = document.getElementById("provincia");
@@ -13,16 +14,16 @@ let pagar = document.getElementById("pagar");
 let cajadetexto = document.getElementById("cajadetexto"); //caja donde saldrá codificado
 let cajadetexto1 = document.getElementById("cajadetexto1"); //caja donde saldrá decodificado
 let texto = document.getElementById("texto"); //para codificar
-let codificado = document.getElementById("codificado"); //mandando los datos a la otra pagina
 let desplazamiento = document.getElementById ("desplazamiento"); 
 let desplazamiento1= document.getElementById("desplazamiento1"); //para decoodificar
+let btnEnviar = document.getElementById("enviar");
 
 //llamo al botón Encriptar
 btnEncode.addEventListener("click", Encode);
 function Encode() {
- desplazamiento = document.getElementById("desplazamiento").value;
+ desplazamiento = document.getElementById("desplazamiento").value; //valor que quiero jalar o desplazar, para que me funcione
  cajadetexto.value = cipher.encode(desplazamiento,nombre.value + ' ' + edad.value + ' ' + provincia.value + ' '+ distrito.value + ' ' + direccion.value +' '+ numeroDNI.value + ' ' + telefono.value + ' ' + pagar.value);
- codificado.value=cipher.encode( desplazamiento,nombre.value + ' ' + edad.value + ' ' + provincia.value + ' '+ distrito.value + ' ' + direccion.value +' '+ numeroDNI.value + ' ' + telefono.value + ' ' + pagar.value);
+ texto.value=cipher.encode( desplazamiento,nombre.value + ' ' + edad.value + ' ' + provincia.value + ' '+ distrito.value + ' ' + direccion.value +' '+ numeroDNI.value + ' ' + telefono.value + ' ' + pagar.value);
 }
 
 
@@ -49,10 +50,22 @@ function Limpiar() {
   document.getElementById("numeroDNI").value = "";
   document.getElementById("telefono").value = "";
   document.getElementById("pagar").value ="";
-  document.getElementById("cajadetexto").value ="";
+  document.getElementById("cajadetexto1").value ="";
 
 
+}
+btnEnviar.addEventListener("click", Enviar);
+function Enviar(){
+  document.getElementById("contorno").classList.add("ocultar");
+  document.getElementById("contorno1").classList.remove("ocultar");
+}
 
+
+btnLimpiamos.addEventListener("click", Limpiamos);
+function Limpiamos(){
+document.getElementById("desplazamiento1").value="";
+document.getElementById("cajadetexto1").value="";
+document.getElementById("texto").value="";
 }
 
 // IMPORTANTE:

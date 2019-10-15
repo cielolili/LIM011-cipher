@@ -12,7 +12,7 @@ encode: (offset, string) => {
     } else if (convAscii >= 48 && convAscii <= 57) { //numeros
       nuevoTexto += String.fromCharCode((convAscii - 48 + parseInt (offset)) %10 +48); //es 10 porque empieza del 0 al 9
     } else {
-      nuevoTexto += string[i];       // concateno los números, signos, espacios y caracteres especiales
+      nuevoTexto += string[i];      // concateno los números, signos, espacios y caracteres especiales
     }
   }
   return nuevoTexto; //retorno
@@ -21,7 +21,7 @@ encode: (offset, string) => {
 
 decode: (offset, string) => {
   let nuevoTexto = '';
-  // let key = parseInt(offset);
+  // let desplazamiento = parseInt(offset);
   for (let i = 0; i < string.length; i++) {
     let convAscii = string.charCodeAt(i);
     if (convAscii >= 65 && convAscii <= 90) { //Mayus Ascii: 65-90

@@ -1,81 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="css/style.css" />
 
-  </head>
-  <body>
+<head>
+   <meta charset="utf-8">
+   <title>Caesar Cipher</title>
+   <link rel="stylesheet" href="css/style.css" />
 
-<div id="contorno"class="lista">
-    <img src="imagenes/celular.jpg"width="300px">
-        <center>  <br><br> <br>
-    <h1>Registro de usuarios de telefonía móvil</h1>
-        </center>
+</head>
 
-        <br> <br><br>
-    <label for="nombre"> Nombre: </label>
-       <input type="text"  placeholder="escriba aquí" id="nombre" > <br> <br><br>
+<body>
 
-    <label for="edad"> Edad: </label>
-       <input type="text"  placeholder="escriba aquí" id="edad"> <br><br><br>
+   <div id="contorno" class="lista">
+      <header>
+         <img src="imagenes/celular.jpg" width="300px">
+         <br><br> <br>
+         <h1>Registro de usuarios de telefonía móvil</h1>
 
-    <label for="provincia"> Provincia: </label>
-       <input type="text"  placeholder="escriba aquí" id="provincia">
+      </header>
+      <main>
+         <br> <br><br>
+         <label for="nombre"> Nombre: </label>
+         <input type="text" placeholder="escriba aquí" id="nombre"> <br> <br><br>
 
-    <label for="distrito"> Distrito: </label>
-       <input type="text"  placeholder="escriba aquí" id="distrito">
+         <label for="edad"> Edad: </label>
+         <input type="text" placeholder="escriba aquí" id="edad"> <br><br><br>
 
-    <label for="dirección"> Dirección:  </label>
-       <input type="text" placeholder="escriba aquí"id="direccion" > <br><br> <br>
+         <label for="provincia"> Provincia: </label>
+         <input type="text" placeholder="escriba aquí" id="provincia">
 
-    <label for="numero">  Número de DNI </label>
-       <input type="text" placeholder="escriba aquí" id="numeroDNI"> <br><br><br>
+         <label for="distrito"> Distrito: </label>
+         <input type="text" placeholder="escriba aquí" id="distrito">
 
-    <label for="telefono">Número de teléfono: </label>
-       <input type="text" placeholder="escriba aquí"id="telefono"><br><br><br>
+         <label for="dirección"> Dirección: </label>
+         <input type="text" placeholder="escriba aquí" id="direccion"> <br><br> <br>
 
-    <label for="pagar"> Monto a pagar: </label>
-        <input type="text" placeholder="escriba aquí" id="pagar"><br><br><br>
+         <label for="numero"> Número de DNI </label>
+         <input type="text" placeholder="escriba aquí" id="numeroDNI"> <br><br><br>
 
-  <div>
-    <center>
-     <strong> <p> Ingrese número de desplazamiento según la inicial de su nombre</p> </strong>
-        <input type="number"  id="desplazamiento" min="1">
+         <label for="telefono">Número de teléfono: </label>
+         <input type="text" placeholder="escriba aquí" id="telefono"><br><br><br>
 
-        <button type="button"  id="cifrar" value="CODIFICAR">CODIFICAR</button>
-        <button type="button" id="botonLimpiar">LIMPIAR</button> <br><br>
-
-    <textarea id="cajadetexto" rows="9" cols="60"> </textarea>
-     </center>
-  </div>
-</div>
+         <label for="pagar"> Monto a pagar: </label>
+         <input type="text" placeholder="escriba aquí" id="pagar"><br><br><br>
 
 
-<div class="lista1">
-   <center>
 
-      <img src="imagenes/celular.jpg"width="300px">
-         <br><br> <br> <br>
-      <h2>Registro de usuarios de telefonía móvil</h2> <br> <br> <br>
-   
-      <textarea id="codificado" rows="9" cols="60"></textarea> <br><br>
-      <strong> <label> Escriba para decodificar </label> <strong>
-          <input type="text" id="texto">
-  <div>
+         <strong>
+            <p> Ingrese número de desplazamiento según la inicial de su nombre</p>
+         </strong>
+         <input type="number" id="desplazamiento" min="1">
 
-       <p> Ingrese el número de desplazamientos </p>
-           <input type="number"  id="desplazamiento1" min="1">
-           <button type="button"  id="descifrar" value="DECODIFICAR">DECODIFICAR</button> <br><br><br>
+         <button type="button" id="cifrar" value="CODIFICAR">CODIFICAR</button>
+         <button type="button" id="botonLimpiar">LIMPIAR</button> 
+         <button type="button" id="enviar" value="enviar">ENVIAR</button><br><br>
+
+         <textarea id="cajadetexto" class="cajadetexto"> </textarea>
 
 
-      <textarea id="cajadetexto1" rows="9" cols="60"> </textarea>
+      </main>
 
-   </center>
+      <footer class="piePagina">
+         <p>Copyright &copy; Cielo Torres. Todos los derechos reservados.</p>
+      </footer>
+
    </div>
-</div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+
+
+   <div id="contorno1" class="lista1 ocultar">
+
+      <header>
+         <img src="imagenes/celular.jpg" width="300px">
+         <br><br> <br> <br>
+         <h2>Registro de usuarios de telefonía móvil</h2> <br> <br> <br>
+      </header>
+      <main>
+               <textarea type="text" id="texto"></textarea>
+  
+               <div>
+
+                  <p> Ingrese el número de desplazamientos </p>
+                  <input type="number" id="desplazamiento1" min="1">
+                  <button type="button" id="descifrar" value="DECODIFICAR">DECODIFICAR</button>
+                  <button type="button" id="botonLimpiamos">LIMPIAR</button> <br><br>
+
+
+                  <textarea id="cajadetexto1" class="cajadetexto1"></textarea>
+               </div>
+
+      </main>
+
+      <footer class="pie">
+         <p>Copyright &copy; Cielo Torres. Todos los derechos reservados.</p>
+      </footer>
+
+   </div>
+
+
+   <script src="cipher.js"></script>
+   <script src="index.js"></script>
+</body>
+
 </html>

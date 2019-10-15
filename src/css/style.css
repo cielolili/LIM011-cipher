@@ -47,3 +47,39 @@ input, textarea{
   border: pink 2px outset;
 
 }
+
+.cajadetexto{
+  resize: none; 
+  outline: 0px;
+  height: 20px;
+  width: 350px;
+  padding: 70px;
+}
+#texto{
+  resize: none;
+  outline: 0px;
+  height: 20px;
+  width: 350px;
+  padding: 70px;
+}
+
+.cajadetexto1{
+resize: none;
+outline: 0px;
+height: 20px;
+width: 350px;
+padding: 70px;
+}
+.piePagina{
+  font-size: 15px;
+  text-align: center;
+}
+.pie{
+  font-size: 15px;
+  text-align: center;
+}
+
+.ocultar{
+
+  display: none;
+}
